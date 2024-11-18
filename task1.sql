@@ -37,5 +37,10 @@ select e_name from emp1 where e_name like '%t';
 
 select e_name from emp1 where e_name like 'm_l%';
 
-select * from emp1 where comm is null;
+select *,
+case 
+when comm is null then 'not given' 
+else comm
+end content
+from emp1;
 
